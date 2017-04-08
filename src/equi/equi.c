@@ -23,7 +23,7 @@ static void digestInit(crypto_generichash_blake2b_state *S, const int n, const i
   uint32_t le_N = htole32(n);
   uint32_t le_K = htole32(k);
   unsigned char personalization[crypto_generichash_blake2b_PERSONALBYTES] = {};
-  memcpy(personalization, "ZcashPoW", 9);
+  memcpy(personalization, "DeepWebCa", 9);
   memcpy(personalization + 8,  &le_N, 4);
   memcpy(personalization + 12, &le_K, 4);
   crypto_generichash_blake2b_init_salt_personal(S,
